@@ -70,13 +70,18 @@ The script will display a stylized "Price Oracle Check" message and begin monito
 
 ## ⚙️ Configuration
 
-### 🕒 Cron Schedule
+### ⏱️ Check Interval
 
-The check schedule is configured using the `CRON_SCHEDULE` environment variable in the `.env` file. It uses the standard cron syntax. For example:
+The check interval is configured using the `CRON_SCHEDULE` environment variable in the `.env` file. Set this to the number of minutes between each check. For example:
 
-- `*/10 * * * *`: Every 10 minutes (default)
-- `0 * * * *`: Every hour
-- `0 0 * * *`: Every day at midnight
+```
+CRON_SCHEDULE=10  # Check every 10 minutes
+```
+
+Some example configurations:
+- `5`: Check every 5 minutes
+- `60`: Check every hour
+- `1440`: Check once a day
 
 If not set, the script defaults to checking every 10 minutes.
 
