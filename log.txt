@@ -26,3 +26,9 @@
 2024-07-28T14:10:00.498Z - Current price oracle: 0.985693
 2024-07-28T14:10:00.498Z - Price is above threshold. No alert sent.
 2024-07-28T14:10:00.498Z - ---------------------------------------------------------------
+2024-07-28T14:15:49.739Z - Performing check for KNOX/eUSD (factory-twocrypto-19)
+2024-07-28T14:15:49.791Z - Script started
+2024-07-28T14:15:49.792Z - Cron schedule: */10 * * * *
+2024-07-28T14:15:50.229Z - Pool: KNOX/eUSD - Current price oracle: 0.985693
+2024-07-28T14:15:50.230Z - Price is above threshold. No alert sent.
+2024-07-28T14:15:50.230Z - ---------------------------------------------------------------

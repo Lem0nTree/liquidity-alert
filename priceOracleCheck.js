@@ -71,7 +71,7 @@ function displayStartupMessage() {
 // Function to check the price oracle for a single pool
 async function checkPoolPriceOracle(pool) {
   const now = new Date();
-  const checkMessage = `Performing check for ${pool.name} (${pool.id}) at: ${now.toLocaleString()}`;
+  const checkMessage = `Performing check for ${pool.name} (${pool.id})`;
   console.log(`\n${checkMessage}`);
   logToFile(checkMessage);
   
@@ -80,12 +80,10 @@ async function checkPoolPriceOracle(pool) {
     const poolData = response.data.data.poolData.find(p => p.id === pool.id);
     
     if (poolData) {
-      const checkMessage = `Performing check for ${pool.name} (${pool.id}) at: ${now.toLocaleString()}`;
-      const priceMessage = `Current price oracle: ${poolData.priceOracle.toFixed(6)}`;
-      console.log(checkMessage);
-      console.log(priceMessage);
-      logToFile(priceMessage);
-      
+        const priceMessage = `Pool: ${pool.name} - Current price oracle: ${poolData.priceOracle.toFixed(6)}`;
+        console.log(priceMessage);
+        logToFile(priceMessage);
+        
       if (poolData.priceOracle < pool.alertThreshold) {
         
         const alertMessage = `🚨 *PRICE ALERT* 🚨
