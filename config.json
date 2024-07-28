@@ -1,0 +1,11 @@
+{
+    "pools": [
+      {
+        "id": "factory-twocrypto-19",
+        "name": "KNOX/eUSD",
+        "network": "arbitrum",
+        "factoryType": "factory-twocrypto",
+        "alertThreshold": 0.97
+      }
+    ]
+  }

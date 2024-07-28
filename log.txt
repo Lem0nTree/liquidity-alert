@@ -1,0 +1,28 @@
+2024-07-28T13:34:39.332Z - Performing check for KNOX/eUSD (factory-twocrypto-19) at: 28/7/2024, 15:34:39
+2024-07-28T13:34:39.365Z - Script started
+2024-07-28T13:34:39.365Z - Cron schedule: */10 * * * *
+2024-07-28T13:34:39.784Z - Current price oracle: 0.985693
+2024-07-28T13:34:39.785Z - Price is above threshold. No alert sent.
+2024-07-28T13:34:39.785Z - ---------------------------------------------------------------
+2024-07-28T13:40:00.018Z - Performing check for KNOX/eUSD (factory-twocrypto-19) at: 28/7/2024, 15:40:00
+2024-07-28T13:40:00.454Z - Current price oracle: 0.985693
+2024-07-28T13:40:00.455Z - Price is above threshold. No alert sent.
+2024-07-28T13:40:00.456Z - ---------------------------------------------------------------
+2024-07-28T13:50:00.065Z - Performing check for KNOX/eUSD (factory-twocrypto-19) at: 28/7/2024, 15:50:00
+2024-07-28T13:50:00.558Z - Current price oracle: 0.985693
+2024-07-28T13:50:00.558Z - Price is above threshold. No alert sent.
+2024-07-28T13:50:00.559Z - ---------------------------------------------------------------
+2024-07-28T14:00:00.201Z - Performing check for KNOX/eUSD (factory-twocrypto-19) at: 28/7/2024, 16:00:00
+2024-07-28T14:00:00.589Z - Current price oracle: 0.985693
+2024-07-28T14:00:00.590Z - Price is above threshold. No alert sent.
+2024-07-28T14:00:00.590Z - ---------------------------------------------------------------
+2024-07-28T14:07:22.750Z - Performing check for KNOX/eUSD (factory-twocrypto-19) at: 28/7/2024, 16:07:22
+2024-07-28T14:07:22.793Z - Script started
+2024-07-28T14:07:22.793Z - Cron schedule: */10 * * * *
+2024-07-28T14:07:23.301Z - Current price oracle: 0.985693
+2024-07-28T14:07:23.301Z - Price is above threshold. No alert sent.
+2024-07-28T14:07:23.302Z - ---------------------------------------------------------------
+2024-07-28T14:10:00.202Z - Performing check for KNOX/eUSD (factory-twocrypto-19) at: 28/7/2024, 16:10:00
+2024-07-28T14:10:00.498Z - Current price oracle: 0.985693
+2024-07-28T14:10:00.498Z - Price is above threshold. No alert sent.
+2024-07-28T14:10:00.498Z - ---------------------------------------------------------------

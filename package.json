@@ -1,0 +1,20 @@
+{
+  "name": "liquidity-alert",
+  "version": "1.0.0",
+  "description": "This Node.js script monitors the price oracle for specified pools on Curve.fi. It checks the price every 10 minutes, sends a Telegram alert if the price falls below a specified threshold, and logs all check activities to a file.",
+  "main": "priceOracleCheck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node priceOracleCheck.js"
+  },
+  "keywords": ["liquidity alert","stable coin alert"],
+  "author": "Lem0ntree",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "figlet": "^1.7.0",
+    "node-cron": "^3.0.3",
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
