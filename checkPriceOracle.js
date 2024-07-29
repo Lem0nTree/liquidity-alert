@@ -127,6 +127,7 @@ Time: ${formattedTime}`;
 // Function to check all pools
 async function checkAllPools() {
   for (const pool of config.pools) {
+    await new Promise(resolve => setTimeout(resolve, 1500));
     await checkPoolPriceOracle(pool);
   }
 }
@@ -177,8 +178,9 @@ process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 // Display startup message
 displayStartupMessage();
 
+// Delay for 2.5 second before running the checks
+setTimeout(checkAllPools, 2500);
+
 // Schedule the task using the cron schedule from .env
 cron.schedule(cronSchedule, checkAllPools);
 
-// Run the check immediately on startup
-checkAllPools();

@@ -86,6 +86,7 @@ async function checkPoolReserves(pool) {
       const reserveMessage = `Pool: ${pool.name} - Reserve Ratio: ${reserveRatio.toFixed(6)}`;
       console.log(reserveMessage);
       logToFile(reserveMessage);
+      logToFile(parseFloat(poolData.reserve0) + pool.token0, parseFloat(poolData.reserve1) + pool.token1)
       
       if (reserveRatio < pool.minRatio || reserveRatio > pool.maxRatio) {
         const alertMessage = `
@@ -109,7 +110,6 @@ Time: ${formattedTime}`;
 
         await sendTelegramMessage(alertMessage);
         console.log('Alert sent:', alertMessage);
-        logToFile(`Alert sent: ${alertMessage}`);
       } else {
         const noAlertMessage = 'Reserve ratio is above threshold. No alert sent.';
         console.log(noAlertMessage);
