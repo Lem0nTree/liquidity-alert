@@ -1,0 +1,172 @@
+2024-07-29T01:38:23.648Z - Performing check for USDz/USDC
+2024-07-29T01:38:23.679Z - Script started
+2024-07-29T01:38:23.680Z - Check interval: 10 minutes
+2024-07-29T01:38:24.174Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:38:24.175Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:40:00.397Z - Performing check for USDz/USDC
+2024-07-29T01:40:00.769Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:40:00.770Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:50:00.888Z - Performing check for USDz/USDC
+2024-07-29T01:50:01.429Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:50:01.430Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:52:51.160Z - Performing check for USDz/USDC
+2024-07-29T01:52:51.186Z - Script started
+2024-07-29T01:52:51.186Z - Check interval: 10 minutes
+2024-07-29T01:52:51.637Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:52:51.638Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:55:20.695Z - Performing check for USDz/USDC
+2024-07-29T01:55:20.722Z - Script started
+2024-07-29T01:55:20.722Z - Check interval: 1 minute
+2024-07-29T01:55:21.195Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:55:21.197Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:56:00.985Z - Performing check for USDz/USDC
+2024-07-29T01:56:01.431Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:56:01.432Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:57:02.314Z - Performing check for USDz/USDC
+2024-07-29T01:57:02.352Z - Script started
+2024-07-29T01:57:02.353Z - Check interval: 1 minute
+2024-07-29T01:57:02.936Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:57:04.430Z - Telegram message sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811974.871555116'
+Token1 Balance: '21849346.803825'
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 01:57:02 GMT
+2024-07-29T01:57:04.432Z - Alert sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811974.871555116'
+Token1 Balance: '21849346.803825'
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 01:57:02 GMT
+2024-07-29T01:58:55.311Z - Performing check for USDz/USDC
+2024-07-29T01:58:55.340Z - Script started
+2024-07-29T01:58:55.340Z - Check interval: 1 minute
+2024-07-29T01:58:55.785Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:58:56.080Z - Telegram message sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811975'
+Token1 Balance: '21849347'
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 01:58:55 GMT
+2024-07-29T01:58:56.083Z - Alert sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811975'
+Token1 Balance: '21849347'
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 01:58:55 GMT
+2024-07-29T02:02:02.215Z - Performing check for USDz/USDC
+2024-07-29T02:02:02.245Z - Script started
+2024-07-29T02:02:02.246Z - Check interval: 1 minute
+2024-07-29T02:02:02.882Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T02:02:03.256Z - Telegram message sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811975 USDz'
+Token1 Balance: '21849347 USDC'
+
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 02:02:02 GMT
+2024-07-29T02:02:03.258Z - Alert sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811975 USDz'
+Token1 Balance: '21849347 USDC'
+
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 02:02:02 GMT
+2024-07-29T02:02:23.695Z - Performing check for USDz/USDC
+2024-07-29T02:02:23.729Z - Script started
+2024-07-29T02:02:23.729Z - Check interval: 1 minute
+2024-07-29T02:02:24.147Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T02:02:24.508Z - Telegram message sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: `19811975 USDz`
+Token1 Balance: `21849347 USDC`
+
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 02:02:23 GMT
+2024-07-29T02:02:24.512Z - Alert sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: `19811975 USDz`
+Token1 Balance: `21849347 USDC`
+
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 02:02:23 GMT
