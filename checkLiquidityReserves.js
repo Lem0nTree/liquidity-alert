@@ -3,7 +3,7 @@ const cron = require('node-cron');
 const figlet = require('figlet');
 const fs = require('fs');
 const path = require('path');
-const { queryAerodrome } = require('./liquidityQuery/aerodromeQuery');
+const { queryAerodrome } = require('./liquidityProviders/aerodromeLiquidity');
 require('dotenv').config();
 
 // Load configuration
@@ -129,6 +129,7 @@ Time: ${formattedTime}`;
 // Function to check all liquidity
 async function checkAllLiquidity() {
   for (const pool of config.liquidity) {
+    await new Promise(resolve => setTimeout(resolve, 1500));
     await checkPoolReserves(pool);
   }
 }
@@ -136,8 +137,8 @@ async function checkAllLiquidity() {
 // Display startup message
 displayStartupMessage();
 
+// Delay for 1 second before running the checks
+setTimeout(checkAllLiquidity, 2500);
+
 // Schedule the task using the cron schedule
 cron.schedule(cronSchedule, checkAllLiquidity);
-
-// Run the check immediately on startup
-checkAllLiquidity();

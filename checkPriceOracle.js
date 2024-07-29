@@ -5,8 +5,8 @@ const figlet = require('figlet');
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
-const { fetchCurveData } = require('./priceFetcher/curveFetcher');
-const { fetchAerodromeData } = require('./priceFetcher/aerodromeFetcher');
+const { fetchCurveData } = require('./priceProviders/curvePrice');
+const { fetchAerodromeData } = require('./priceProviders/aerodromePrice');
 
 
 // Load configuration

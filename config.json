@@ -21,6 +21,30 @@
       "decimalstoken1":"6",
       "minRatio": 0.55,
       "type": "aerodrome"
+    },
+    {
+      "id": "aerodrome-pool-2",
+      "name": "USDC/MAI",
+      "token0":"USDC",
+      "token1":"MAI",
+      "network":"base",
+      "offset": 255,
+      "decimalstoken0":"6",
+      "decimalstoken1":"18",
+      "minRatio": 0.55,
+      "type": "aerodrome"
+    },
+    {
+      "id": "aerodrome-pool-3",
+      "name": "USDC/USD+",
+      "token0":"USDC",
+      "token1":"USD+",
+      "network":"base",
+      "offset": 1650,
+      "decimalstoken0":"6",
+      "decimalstoken1":"6",
+      "minRatio": 0.55,
+      "type": "aerodrome"
     }
   ]
 }
