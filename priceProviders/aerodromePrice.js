@@ -1,5 +1,5 @@
 const ethers = require('ethers');
-const aerodromeABI = require('./abi/aerodrome.json');
+const aerodromeABI = require('../abi/aerodrome.json');
 
 async function fetchAerodromeData(pool) {
   try {

@@ -20,6 +20,7 @@
       "decimalstoken0":"18",
       "decimalstoken1":"6",
       "minRatio": 0.55,
+      "maxRatio": 2,
       "type": "aerodrome"
     },
     {
@@ -32,6 +33,7 @@
       "decimalstoken0":"6",
       "decimalstoken1":"18",
       "minRatio": 0.55,
+      "maxRatio": 2,
       "type": "aerodrome"
     },
     {
@@ -44,6 +46,20 @@
       "decimalstoken0":"6",
       "decimalstoken1":"6",
       "minRatio": 0.55,
+      "maxRatio": 2,
+      "type": "aerodrome"
+    },
+    {
+      "id": "aerodrome-pool-4",
+      "name": "DOLA/USDC",
+      "token0":"DOLA",
+      "token1":"USDC",
+      "network":"base",
+      "offset": 326,
+      "decimalstoken0":"18",
+      "decimalstoken1":"6",
+      "minRatio": 0.55,
+      "maxRatio": 2,
       "type": "aerodrome"
     }
   ]

@@ -130,3 +130,4 @@ dist
 .pnp.*
 log.txt
 liquiditylog.txt
+*.txt

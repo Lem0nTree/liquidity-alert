@@ -87,7 +87,7 @@ async function checkPoolReserves(pool) {
       console.log(reserveMessage);
       logToFile(reserveMessage);
       
-      if (reserveRatio < pool.minRatio) {
+      if (reserveRatio < pool.minRatio || reserveRatio > pool.maxRatio) {
         const alertMessage = `
 🚨 *RESERVE ALERT* 🚨
 
@@ -96,6 +96,7 @@ ID: \`${pool.id}\`
         
 Current Reserve Ratio: \`${reserveRatio.toFixed(6)}\`
 Min Ratio Threshold: \`${pool.minRatio}\`
+Max Ratio Threshold:  \`${pool.maxRatio}\`
 
 Token0 Balance: \`${Math.ceil(parseFloat(poolData.reserve0))} ${pool.token0}\`
 Token1 Balance: \`${Math.ceil(parseFloat(poolData.reserve1))} ${pool.token1}\`
