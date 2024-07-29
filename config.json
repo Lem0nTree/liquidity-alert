@@ -1,11 +1,50 @@
 {
-    "pools": [
-      {
-        "id": "factory-twocrypto-19",
-        "name": "KNOX/eUSD",
-        "network": "arbitrum",
-        "factoryType": "factory-twocrypto",
-        "alertThreshold": 0.97
-      }
-    ]
-  }
+  "pools": [
+    {
+      "id": "factory-twocrypto-19",
+      "name": "KNOX/eUSD",
+      "network": "arbitrum",
+      "factoryType": "factory-twocrypto",
+      "alertThreshold": 0.97,
+      "type": "curve"
+    }
+  ],
+  "liquidity": [
+    {
+      "id": "aerodrome-pool-1",
+      "name": "USDz/USDC",
+      "token0":"USDz",
+      "token1":"USDC",
+      "network":"base",
+      "offset": 1169,
+      "decimalstoken0":"18",
+      "decimalstoken1":"6",
+      "minRatio": 0.55,
+      "type": "aerodrome"
+    },
+    {
+      "id": "aerodrome-pool-2",
+      "name": "USDC/MAI",
+      "token0":"USDC",
+      "token1":"MAI",
+      "network":"base",
+      "offset": 255,
+      "decimalstoken0":"6",
+      "decimalstoken1":"18",
+      "minRatio": 0.55,
+      "type": "aerodrome"
+    },
+    {
+      "id": "aerodrome-pool-3",
+      "name": "USDC/USD+",
+      "token0":"USDC",
+      "token1":"USD+",
+      "network":"base",
+      "offset": 1650,
+      "decimalstoken0":"6",
+      "decimalstoken1":"6",
+      "minRatio": 0.55,
+      "type": "aerodrome"
+    }
+  ]
+}

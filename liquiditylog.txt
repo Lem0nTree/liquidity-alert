@@ -1,0 +1,263 @@
+2024-07-29T01:38:23.648Z - Performing check for USDz/USDC
+2024-07-29T01:38:23.679Z - Script started
+2024-07-29T01:38:23.680Z - Check interval: 10 minutes
+2024-07-29T01:38:24.174Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:38:24.175Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:40:00.397Z - Performing check for USDz/USDC
+2024-07-29T01:40:00.769Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:40:00.770Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:50:00.888Z - Performing check for USDz/USDC
+2024-07-29T01:50:01.429Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:50:01.430Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:52:51.160Z - Performing check for USDz/USDC
+2024-07-29T01:52:51.186Z - Script started
+2024-07-29T01:52:51.186Z - Check interval: 10 minutes
+2024-07-29T01:52:51.637Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:52:51.638Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:55:20.695Z - Performing check for USDz/USDC
+2024-07-29T01:55:20.722Z - Script started
+2024-07-29T01:55:20.722Z - Check interval: 1 minute
+2024-07-29T01:55:21.195Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:55:21.197Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:56:00.985Z - Performing check for USDz/USDC
+2024-07-29T01:56:01.431Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:56:01.432Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T01:57:02.314Z - Performing check for USDz/USDC
+2024-07-29T01:57:02.352Z - Script started
+2024-07-29T01:57:02.353Z - Check interval: 1 minute
+2024-07-29T01:57:02.936Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:57:04.430Z - Telegram message sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811974.871555116'
+Token1 Balance: '21849346.803825'
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 01:57:02 GMT
+2024-07-29T01:57:04.432Z - Alert sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811974.871555116'
+Token1 Balance: '21849346.803825'
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 01:57:02 GMT
+2024-07-29T01:58:55.311Z - Performing check for USDz/USDC
+2024-07-29T01:58:55.340Z - Script started
+2024-07-29T01:58:55.340Z - Check interval: 1 minute
+2024-07-29T01:58:55.785Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T01:58:56.080Z - Telegram message sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811975'
+Token1 Balance: '21849347'
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 01:58:55 GMT
+2024-07-29T01:58:56.083Z - Alert sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811975'
+Token1 Balance: '21849347'
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 01:58:55 GMT
+2024-07-29T02:02:02.215Z - Performing check for USDz/USDC
+2024-07-29T02:02:02.245Z - Script started
+2024-07-29T02:02:02.246Z - Check interval: 1 minute
+2024-07-29T02:02:02.882Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T02:02:03.256Z - Telegram message sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811975 USDz'
+Token1 Balance: '21849347 USDC'
+
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 02:02:02 GMT
+2024-07-29T02:02:03.258Z - Alert sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: '19811975 USDz'
+Token1 Balance: '21849347 USDC'
+
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 02:02:02 GMT
+2024-07-29T02:02:23.695Z - Performing check for USDz/USDC
+2024-07-29T02:02:23.729Z - Script started
+2024-07-29T02:02:23.729Z - Check interval: 1 minute
+2024-07-29T02:02:24.147Z - Pool: USDz/USDC - Reserve Ratio: 0.906754
+2024-07-29T02:02:24.508Z - Telegram message sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: `19811975 USDz`
+Token1 Balance: `21849347 USDC`
+
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 02:02:23 GMT
+2024-07-29T02:02:24.512Z - Alert sent: 
+🚨 *RESERVE ALERT* 🚨
+
+Pool: *USDz/USDC*
+ID: `aerodrome-pool-1`
+        
+Current Reserve Ratio: `0.906754`
+Min Ratio Threshold: `0.95`
+
+Token0 Balance: `19811975 USDz`
+Token1 Balance: `21849347 USDC`
+
+
+        
+⚠️ *Reserve ratio has dropped below the alert threshold!* ⚠️
+        
+Time: Mon, 29 Jul 2024 02:02:23 GMT
+2024-07-29T10:28:44.242Z - Performing check for USDz/USDC
+2024-07-29T10:28:44.258Z - Script started
+2024-07-29T10:28:44.259Z - Check interval: 1 minute
+2024-07-29T10:28:44.529Z - Pool: USDz/USDC - Reserve Ratio: 0.906659
+2024-07-29T10:28:44.530Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T10:28:44.531Z - Performing check for USDC/MAI
+2024-07-29T10:28:44.725Z - Pool: USDC/MAI - Reserve Ratio: 1.290312
+2024-07-29T10:28:44.726Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T10:29:00.324Z - Performing check for USDz/USDC
+2024-07-29T10:29:00.552Z - Pool: USDz/USDC - Reserve Ratio: 0.906659
+2024-07-29T10:29:00.553Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T10:29:00.553Z - Performing check for USDC/MAI
+2024-07-29T10:29:00.759Z - Pool: USDC/MAI - Reserve Ratio: 1.290312
+2024-07-29T10:29:00.759Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T10:54:50.373Z - Performing check for USDz/USDC
+2024-07-29T10:54:50.388Z - Script started
+2024-07-29T10:54:50.388Z - Check interval: 1 minute
+2024-07-29T10:54:50.660Z - Pool: USDz/USDC - Reserve Ratio: 0.908012
+2024-07-29T10:54:50.661Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T10:54:50.662Z - Performing check for USDC/MAI
+2024-07-29T10:54:50.874Z - Pool: USDC/MAI - Reserve Ratio: 1.290312
+2024-07-29T10:54:50.875Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T10:54:50.876Z - Performing check for USDC/USD+
+2024-07-29T10:54:51.084Z - Pool: USDC/USD+ - Reserve Ratio: 1117689094272.831299
+2024-07-29T10:54:51.085Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T10:55:31.893Z - Performing check for USDz/USDC
+2024-07-29T10:55:31.910Z - Script started
+2024-07-29T10:55:31.910Z - Check interval: 1 minute
+2024-07-29T10:55:32.152Z - Pool: USDz/USDC - Reserve Ratio: 0.908012
+2024-07-29T10:55:32.153Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T10:55:32.154Z - Performing check for USDC/MAI
+2024-07-29T10:55:32.639Z - Pool: USDC/MAI - Reserve Ratio: 1.290312
+2024-07-29T10:55:32.640Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T10:55:32.640Z - Performing check for USDC/USD+
+2024-07-29T10:55:32.856Z - Pool: USDC/USD+ - Reserve Ratio: 1.117689
+2024-07-29T10:55:32.857Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:03:16.870Z - Script started
+2024-07-29T11:03:16.870Z - Check interval: 1 minute
+2024-07-29T11:03:17.878Z - Performing check for USDz/USDC
+2024-07-29T11:03:18.214Z - Pool: USDz/USDC - Reserve Ratio: 0.908012
+2024-07-29T11:03:18.215Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:03:18.216Z - Performing check for USDC/MAI
+2024-07-29T11:03:18.439Z - Pool: USDC/MAI - Reserve Ratio: 1.290321
+2024-07-29T11:03:18.440Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:03:18.441Z - Performing check for USDC/USD+
+2024-07-29T11:03:18.647Z - Pool: USDC/USD+ - Reserve Ratio: 1.111501
+2024-07-29T11:03:18.648Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:03:34.723Z - Script started
+2024-07-29T11:03:34.723Z - Check interval: 1 minute
+2024-07-29T11:03:37.712Z - Performing check for USDz/USDC
+2024-07-29T11:03:37.939Z - Pool: USDz/USDC - Reserve Ratio: 0.908012
+2024-07-29T11:03:37.940Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:03:37.941Z - Performing check for USDC/MAI
+2024-07-29T11:03:38.178Z - Pool: USDC/MAI - Reserve Ratio: 1.290321
+2024-07-29T11:03:38.179Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:03:38.179Z - Performing check for USDC/USD+
+2024-07-29T11:03:38.391Z - Pool: USDC/USD+ - Reserve Ratio: 1.111501
+2024-07-29T11:03:38.392Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:05:19.084Z - Script started
+2024-07-29T11:05:19.084Z - Check interval: 1 minute
+2024-07-29T11:05:23.090Z - Performing check for USDz/USDC
+2024-07-29T11:05:23.450Z - Pool: USDz/USDC - Reserve Ratio: 0.908012
+2024-07-29T11:05:23.450Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:05:24.462Z - Performing check for USDC/MAI
+2024-07-29T11:05:24.660Z - Pool: USDC/MAI - Reserve Ratio: 1.290321
+2024-07-29T11:05:24.660Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:05:25.672Z - Performing check for USDC/USD+
+2024-07-29T11:05:25.916Z - Pool: USDC/USD+ - Reserve Ratio: 1.107858
+2024-07-29T11:05:25.916Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:05:37.481Z - Script started
+2024-07-29T11:05:37.482Z - Check interval: 1 minute
+2024-07-29T11:05:41.979Z - Performing check for USDz/USDC
+2024-07-29T11:05:42.269Z - Pool: USDz/USDC - Reserve Ratio: 0.908012
+2024-07-29T11:05:42.269Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:05:43.776Z - Performing check for USDC/MAI
+2024-07-29T11:05:43.973Z - Pool: USDC/MAI - Reserve Ratio: 1.290321
+2024-07-29T11:05:43.973Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:05:45.488Z - Performing check for USDC/USD+
+2024-07-29T11:05:45.687Z - Pool: USDC/USD+ - Reserve Ratio: 1.112230
+2024-07-29T11:05:45.687Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:06:03.520Z - Script started
+2024-07-29T11:06:03.521Z - Check interval: 1 minute
+2024-07-29T11:06:07.515Z - Performing check for USDz/USDC
+2024-07-29T11:06:07.776Z - Pool: USDz/USDC - Reserve Ratio: 0.908012
+2024-07-29T11:06:07.776Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:06:09.285Z - Performing check for USDC/MAI
+2024-07-29T11:06:09.528Z - Pool: USDC/MAI - Reserve Ratio: 1.290321
+2024-07-29T11:06:09.529Z - Reserve ratio is above threshold. No alert sent.
+2024-07-29T11:06:11.031Z - Performing check for USDC/USD+
+2024-07-29T11:06:11.236Z - Pool: USDC/USD+ - Reserve Ratio: 1.112230
+2024-07-29T11:06:11.236Z - Reserve ratio is above threshold. No alert sent.

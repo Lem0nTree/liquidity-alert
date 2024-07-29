@@ -5,6 +5,9 @@ const figlet = require('figlet');
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
+const { fetchCurveData } = require('./priceProviders/curvePrice');
+const { fetchAerodromeData } = require('./priceProviders/aerodromePrice');
+
 
 // Load configuration
 const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
@@ -22,7 +25,7 @@ const cronSchedule = `*/${scheduleMinutes} * * * *`;
 const bot = new TelegramBot(botToken);
 
 // Log file path
-const logFilePath = path.join(__dirname, 'log.txt');
+const logFilePath = path.join(__dirname, 'pricelog.txt');
 
 // Function to log messages to file
 function logToFile(message) {
@@ -46,13 +49,6 @@ async function sendTelegramMessage(message) {
     }
 }
 
-// Function to convert cron schedule to minutes
-function cronToMinutes(cronExpression) {
-    const parts = cronExpression.split(' ');
-    if (parts[0] === '*' && parts[1] === '*') return 1;
-    if (parts[0] === '*') return 60;
-    return parseInt(parts[0].replace('*/', ''));
-}
 
 // Function to display stylized startup message
 function displayStartupMessage() {
@@ -74,94 +70,59 @@ function displayStartupMessage() {
 
 // Function to check the price oracle for a single pool
 async function checkPoolPriceOracle(pool) {
-    const now = new Date();
+  const now = new Date();
+  const checkMessage = `Performing check for ${pool.name} (${pool.id})`;
+  console.log(`\n${checkMessage}`);
+  logToFile(checkMessage);
+  
+  try {
+    let poolData;
+    if (pool.type === 'curve') {
+      poolData = await fetchCurveData(pool);
+    } else if (pool.type === 'aerodrome') {
+      poolData = await fetchAerodromeData(pool);
+    } else {
+      throw new Error(`Unknown pool type: ${pool.type}`);
+    }
+    const formattedTime = now.toUTCString();
+    const priceMessage = `Pool: ${poolData.name} - Current price oracle: ${poolData.priceOracle.toFixed(6)}`;
+    console.log(priceMessage);
+    console.log('Check Time:',formattedTime);
+    logToFile(priceMessage);
 
-    const checkMessage = `Performing check for ${pool.name} (${pool.id})`;
-  
-    console.log(`\n${checkMessage}`);
-  
-    logToFile(checkMessage);
-  
-    
-  
-    try {
-      const now = new Date();
-      const formattedTime = now.toUTCString();
+    if (poolData.priceOracle < pool.alertThreshold) {
 
-      const response = await axios.get(`https://api.curve.fi/api/getPools/${pool.network}/${pool.factoryType}`);
-  
-      const poolData = response.data.data.poolData.find(p => p.id === pool.id);
-  
-      
-  
-      if (poolData) {
-  
-          const priceMessage = `Pool: ${pool.name} - Current price oracle: ${poolData.priceOracle.toFixed(6)}`;
-
-          console.log(priceMessage);
-          console.log('Check Time:',formattedTime);
-          logToFile(priceMessage);
-  
-  
-  
-        if (poolData.priceOracle < pool.alertThreshold) {
-  
-          const alertMessage = `
-  
+      const alertMessage = `
 🚨 *PRICE ALERT* 🚨
-  
-Pool: *${pool.name}*
-ID: \`${pool.id}\`
-  
+
+Pool: *${poolData.name}*
+ID: \`${poolData.id}\`
+    
 Current Price Oracle: \`${poolData.priceOracle.toFixed(6)}\`
 Alert Threshold: \`${pool.alertThreshold}\`
-  
+    
 ⚠️ *Price has dropped below the alert threshold!* ⚠️
-  
+    
 Time: ${formattedTime}`;
 
-          await sendTelegramMessage(alertMessage);
-  
-          console.log('Alert sent:', alertMessage);
-  
-          logToFile(`Alert sent: ${alertMessage}`);
-  
-        } else {
-  
-          const noAlertMessage = 'Price is above threshold. No alert sent.';
-  
-          console.log(noAlertMessage);
-  
-          logToFile(noAlertMessage);
-  
-        }
-  
-      } else {
-  
-        const notFoundMessage = `Pool ${pool.id} not found in the API response.`;
-  
-        console.log(notFoundMessage);
-  
-        logToFile(notFoundMessage);
-  
-      }
-  
-    } catch (error) {
-  
-      const errorMessage = `Error checking price oracle for ${pool.name}: ${error.message}`;
-  
-      console.error(errorMessage);
-  
-      logToFile(errorMessage);
-  
+      await sendTelegramMessage(alertMessage);
+      console.log('Alert sent:', alertMessage);
+      logToFile(`Alert sent: ${alertMessage}`);
+    } else {
+      const noAlertMessage = 'Price is above threshold. No alert sent.';
+      console.log(noAlertMessage);
+      logToFile(noAlertMessage);
     }
+  } catch (error) {
+    const errorMessage = `Error checking price oracle for ${pool.name}: ${error.message}`;
+    console.error(errorMessage);
+    logToFile(errorMessage);
+  }
   
-    
-  
-    console.log('---------------------------------------------------------------');
-  
-    logToFile('---------------------------------------------------------------');
+  console.log('---------------------------------------------------------------');
+  logToFile('---------------------------------------------------------------');
 }
+
 
 // Function to check all pools
 async function checkAllPools() {

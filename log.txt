@@ -135,3 +135,9 @@ Time: Sun, 28 Jul 2024 14:46:16 GMT
 2024-07-28T14:54:25.717Z - Pool: KNOX/eUSD - Current price oracle: 0.985693
 2024-07-28T14:54:25.718Z - Price is above threshold. No alert sent.
 2024-07-28T14:54:25.718Z - ---------------------------------------------------------------
+2024-07-28T15:00:00.026Z - Performing check for KNOX/eUSD (factory-twocrypto-19)
+2024-07-28T15:00:00.984Z - Pool: KNOX/eUSD - Current price oracle: 0.985693
+2024-07-28T15:00:00.984Z - Price is above threshold. No alert sent.
+2024-07-28T15:00:00.985Z - ---------------------------------------------------------------
+2024-07-28T15:04:14.914Z - Received SIGINT. Shutting down gracefully.
+2024-07-28T15:04:15.356Z - Telegram message sent: ⚠️ The Price Oracle Check script is shutting down. (Signal: SIGINT)
