@@ -42,7 +42,7 @@
       "token0":"USDC",
       "token1":"USD+",
       "network":"base",
-      "offset": 1650,
+      "offset": 1666,
       "decimalstoken0":"6",
       "decimalstoken1":"6",
       "minRatio": 0.55,
@@ -59,7 +59,7 @@
       "decimalstoken0":"18",
       "decimalstoken1":"6",
       "minRatio": 0.55,
-      "maxRatio": 2,
+      "maxRatio": 1,
       "type": "aerodrome"
     }
   ]

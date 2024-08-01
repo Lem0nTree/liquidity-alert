@@ -5,7 +5,7 @@ This Node.js script monitors the price oracle for specified pools on Curve.fi. I
 ## ✨ Features
 
 - 📊 Fetches price oracle data from Curve.fi API for multiple pools
-- 🚨 Sends Telegram alerts when price drops below threshold
+- 🚨 Sends Telegram or SMS alerts when price drops below threshold
 - 🧵 Supports sending alerts to specific Telegram threads
 - ⚙️ Configurable pools and thresholds via external configuration file
 - ⏰ Configurable check schedule via environment variable
@@ -37,10 +37,24 @@ Before you begin, ensure you have met the following requirements:
 
 3. Create a `.env` file in the project root and add your configuration:
    ```
-   TELEGRAM_BOT_TOKEN=your_bot_token_here
-   TELEGRAM_CHAT_ID=your_chat_id_here
-   TELEGRAM_THREAD_ID=your_thread_id_here  # Optional
-   CRON_SCHEDULE="*/10 * * * *"  # Check every 10 minutes (default if not set)
+ - **Telegram configuration**:
+     - `TELEGRAM_BOT_TOKEN`: Your Telegram bot token.
+     - `TELEGRAM_CHAT_ID`: The chat ID where alerts will be sent.
+     - `TELEGRAM_LIQUIDITY_THREAD_ID`: The thread ID for Telegram messages (optional).
+
+   - **Twilio configuration**:
+     - `TWILIO_ACCOUNT_SID`: Your Twilio account SID.
+     - `TWILIO_AUTH_TOKEN`: Your Twilio auth token.
+     - `TWILIO_PHONE_NUMBER`: Your Twilio phone number.
+     - `ALERT_PHONE_NUMBER`: The phone number to receive SMS alerts.
+     - `ENABLE_SMS_ALERT`: Set to `true` to enable SMS alerts.
+
+   - **RPC URL for Base chain**:
+     - `RPC_BASE`: Your RPC URL.
+
+   - **Schedule in minutes**:
+     - `CRON_SCHEDULE`: The interval in minutes for checking the reserves.
+
    ```
 
 4. Create a `config.json` file in the project root with your pool configurations:

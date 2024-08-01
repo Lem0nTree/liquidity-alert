@@ -4,6 +4,7 @@ const figlet = require('figlet');
 const fs = require('fs');
 const path = require('path');
 const { queryAerodrome } = require('./liquidityProviders/aerodromeLiquidity');
+const twilio = require('twilio');
 require('dotenv').config();
 
 // Load configuration
@@ -13,6 +14,13 @@ const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 const botToken = process.env.TELEGRAM_BOT_TOKEN;
 const chatId = process.env.TELEGRAM_CHAT_ID;
 const threadId = process.env.TELEGRAM_LIQUIDITY_THREAD_ID;
+
+// Twilio configuration
+const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID;
+const twilioAuthToken = process.env.TWILIO_AUTH_TOKEN;
+const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
+const alertPhoneNumber = process.env.ALERT_PHONE_NUMBER;
+const enableSmsAlert = process.env.ENABLE_SMS_ALERT === 'true';
 
 // RPC URL for Base chain
 const rpcUrl = process.env.RPC_BASE;
@@ -25,6 +33,9 @@ const cronSchedule = `*/${scheduleMinutes} * * * *`;
 
 // Create a new bot instance
 const bot = new TelegramBot(botToken);
+
+// Create a Twilio client instance
+const twilioClient = twilio(twilioAccountSid, twilioAuthToken);
 
 // Log file path
 const logFilePath = path.join(__dirname, 'liquiditylog.txt');
@@ -48,6 +59,23 @@ async function sendTelegramMessage(message) {
   } catch (error) {
     logToFile(`Error sending Telegram message: ${error.message}`);
     console.error('Error sending Telegram message:', error);
+  }
+}
+
+// Function to send SMS alert
+async function sendSmsAlert(message) {
+  if (!enableSmsAlert) return;
+
+  try {
+    await twilioClient.messages.create({
+      body: message,
+      from: twilioPhoneNumber,
+      to: alertPhoneNumber
+    });
+    logToFile(`SMS alert sent: ${message}`);
+  } catch (error) {
+    logToFile(`Error sending SMS alert: ${error.message}`);
+    console.error('Error sending SMS alert:', error);
   }
 }
 
@@ -75,7 +103,7 @@ async function checkPoolReserves(pool) {
   const formattedTime = now.toUTCString();
   const checkMessage = `Performing check for ${pool.name}`;
   console.log(`\n${checkMessage}`);
-  console.log('Check Time:',formattedTime);
+  console.log('Check Time:', formattedTime);
   logToFile(checkMessage);
   
   try {
@@ -86,7 +114,7 @@ async function checkPoolReserves(pool) {
       const reserveMessage = `Pool: ${pool.name} - Reserve Ratio: ${reserveRatio.toFixed(6)}`;
       console.log(reserveMessage);
       logToFile(reserveMessage);
-      logToFile(parseFloat(poolData.reserve0) + pool.token0, parseFloat(poolData.reserve1) + pool.token1)
+      logToFile(parseFloat(poolData.reserve0) + pool.token0, parseFloat(poolData.reserve1) + pool.token1);
       
       if (reserveRatio < pool.minRatio || reserveRatio > pool.maxRatio) {
         const alertMessage = `
@@ -108,7 +136,25 @@ Token1 Balance: \`${Math.ceil(parseFloat(poolData.reserve1))} ${pool.token1}\`
         
 Time: ${formattedTime}`;
 
+        const smsAlertMessage = `
+RESERVE ALERT
+
+Pool: ${pool.name}
+ID: ${pool.id}
+        
+Current Reserve Ratio: ${reserveRatio.toFixed(6)}
+Min Ratio Threshold: ${pool.minRatio}
+Max Ratio Threshold: ${pool.maxRatio}
+
+Token0 Balance: ${Math.ceil(parseFloat(poolData.reserve0))} ${pool.token0}
+Token1 Balance: ${Math.ceil(parseFloat(poolData.reserve1))} ${pool.token1}
+
+Reserve ratio has dropped below the alert threshold!
+        
+Time: ${formattedTime}`;
+
         await sendTelegramMessage(alertMessage);
+        await sendSmsAlert(smsAlertMessage); // Send SMS alert
         console.log('Alert sent:', alertMessage);
       } else {
         const noAlertMessage = 'Reserve ratio is above threshold. No alert sent.';
