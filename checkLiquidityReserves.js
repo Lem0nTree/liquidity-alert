@@ -181,6 +181,39 @@ async function checkAllLiquidity() {
   }
 }
 
+// Function to send alerts for uncaught exceptions and unhandled rejections
+async function sendErrorAlert(error) {
+  const errorMessage = `
+🚨 *SCRIPT ERROR ALERT* 🚨
+
+An error occurred in the reserve monitoring script:
+
+\`\`\`
+${error.message}
+\`\`\`
+
+Time: ${new Date().toISOString()}
+`;
+
+
+  await sendTelegramMessage(errorMessage);
+  logToFile(`Error alert sent: ${error.message}`);
+}
+
+// Catch unhandled exceptions
+process.on('uncaughtException', async (error) => {
+  console.error('Uncaught Exception:', error);
+  await sendErrorAlert(error);
+  process.exit(1); // Exit the process after handling the error
+});
+
+// Catch unhandled promise rejections
+process.on('unhandledRejection', async (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  await sendErrorAlert(reason);
+  process.exit(1); // Exit the process after handling the error
+});
+
 // Display startup message
 displayStartupMessage();
 
