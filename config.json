@@ -59,7 +59,7 @@
       "decimalstoken0":"18",
       "decimalstoken1":"6",
       "minRatio": 0.55,
-      "maxRatio": 1,
+      "maxRatio": 2,
       "type": "aerodrome"
     }
   ]
