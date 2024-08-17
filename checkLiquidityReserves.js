@@ -4,6 +4,7 @@ const figlet = require('figlet');
 const fs = require('fs');
 const path = require('path');
 const { queryAerodrome } = require('./liquidityProviders/aerodromeLiquidity');
+const {queryCurve} = require('./liquidityProviders/curveLiquidity')
 const twilio = require('twilio');
 require('dotenv').config();
 
@@ -107,8 +108,12 @@ async function checkPoolReserves(pool) {
   logToFile(checkMessage);
   
   try {
-    const poolData = await queryAerodrome(rpcUrl, pool.decimalstoken0, pool.decimalstoken1, pool.offset);
-    
+    let poolData;
+    if (pool.type === 'aerodrome') {
+      poolData = await queryAerodrome(rpcUrl, pool.decimalstoken0, pool.decimalstoken1, pool.offset);
+    } else if (pool.type === 'curve') {
+      poolData = await queryCurve(pool); // Assuming you have a queryCurve function
+    }
     if (poolData) {
       const reserveRatio = parseFloat(poolData.reserve0) / parseFloat(poolData.reserve1);
       const reserveMessage = `Pool: ${pool.name} - Reserve Ratio: ${reserveRatio.toFixed(6)}`;
@@ -127,8 +132,8 @@ Current Reserve Ratio: \`${reserveRatio.toFixed(6)}\`
 Min Ratio Threshold: \`${pool.minRatio}\`
 Max Ratio Threshold:  \`${pool.maxRatio}\`
 
-Token0 Balance: \`${Math.ceil(parseFloat(poolData.reserve0))} ${pool.token0}\`
-Token1 Balance: \`${Math.ceil(parseFloat(poolData.reserve1))} ${pool.token1}\`
+Token0 Balance: \`${Math.ceil(parseFloat(poolData.reserve0))} ${poolData.token0}\`
+Token1 Balance: \`${Math.ceil(parseFloat(poolData.reserve1))} ${poolData.token1}\`
 
 
         

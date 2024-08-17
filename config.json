@@ -8,6 +8,8 @@
       "alertThreshold": 0.97,
       "type": "curve"
     }
+
+
   ],
   "liquidity": [
     {
@@ -19,21 +21,8 @@
       "offset": 1169,
       "decimalstoken0":"18",
       "decimalstoken1":"6",
-      "minRatio": 0.55,
-      "maxRatio": 2,
-      "type": "aerodrome"
-    },
-    {
-      "id": "aerodrome-pool-2",
-      "name": "USDC/MAI",
-      "token0":"USDC",
-      "token1":"MAI",
-      "network":"base",
-      "offset": 255,
-      "decimalstoken0":"6",
-      "decimalstoken1":"18",
-      "minRatio": 0.55,
-      "maxRatio": 2,
+      "minRatio": 0.80,
+      "maxRatio": 1.18,
       "type": "aerodrome"
     },
     {
@@ -42,7 +31,7 @@
       "token0":"USDC",
       "token1":"USD+",
       "network":"base",
-      "offset": 1666,
+      "offset": 252,
       "decimalstoken0":"6",
       "decimalstoken1":"6",
       "minRatio": 0.55,
@@ -50,17 +39,36 @@
       "type": "aerodrome"
     },
     {
-      "id": "aerodrome-pool-4",
-      "name": "DOLA/USDC",
-      "token0":"DOLA",
-      "token1":"USDC",
+      "id": "aerodrome-pool-5",
+      "name": "WETH/bsdETH",
+      "token0":"WETH",
+      "token1":"bsdETH",
       "network":"base",
-      "offset": 326,
+      "offset": 465,
       "decimalstoken0":"18",
-      "decimalstoken1":"6",
-      "minRatio": 0.55,
+      "decimalstoken1":"18",
+      "minRatio": 0.90,
       "maxRatio": 2,
       "type": "aerodrome"
+    },
+    {
+      "id": "factory-stable-ng-118",
+      "name": "ShezUSDC/USDC",
+      "network": "ethereum",
+      "factoryType": "factory-stable-ng",
+      "minRatio": 0.50,
+      "maxRatio": 1.15,
+      "type": "curve"
+    },
+    {
+      "id": "factory-stable-ng-62",
+      "name": "eUSDC/USDC",
+      "network": "arbitrum",
+      "factoryType": "factory-stable-ng",
+      "minRatio": 0.80,
+      "maxRatio": 1.15,
+      "type": "curve"
     }
+    
   ]
 }
